@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13987002565275D006EA315 /* GKWYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E13986FF2565275D006EA315 /* GKWYWidget.intentdefinition */; };
 		E1FC2D992564BDDD006A9AC7 /* WidgetDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC2D982564BDDD006A9AC7 /* WidgetDemoApp.swift */; };
 		E1FC2D9B2564BDDD006A9AC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FC2D9A2564BDDD006A9AC7 /* ContentView.swift */; };
 		E1FC2D9D2564BDDF006A9AC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FC2D9C2564BDDF006A9AC7 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E13986FF2565275D006EA315 /* GKWYWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = GKWYWidget.intentdefinition; sourceTree = "<group>"; };
 		E1FC2D952564BDDD006A9AC7 /* WidgetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FC2D982564BDDD006A9AC7 /* WidgetDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDemoApp.swift; sourceTree = "<group>"; };
 		E1FC2D9A2564BDDD006A9AC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				E1FC2DB52564BE28006A9AC7 /* Assets.xcassets */,
 				E1FC2DB72564BE28006A9AC7 /* Info.plist */,
 				E1FC2DC82564CA05006A9AC7 /* GKWYDataLoader.swift */,
+				E13986FF2565275D006EA315 /* GKWYWidget.intentdefinition */,
 			);
 			path = GKWYWidget;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				E1FC2DC52564C815006A9AC7 /* GKWYWidgetView.swift in Sources */,
 				E1FC2DB42564BE26006A9AC7 /* GKWYWidget.swift in Sources */,
+				E13987002565275D006EA315 /* GKWYWidget.intentdefinition in Sources */,
 				E1FC2DCA2564CA05006A9AC7 /* GKWYDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +444,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GKWYWidget/Info.plist;
+				INTENTS_CODEGEN_LANGUAGE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +465,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GKWYWidget/Info.plist;
+				INTENTS_CODEGEN_LANGUAGE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

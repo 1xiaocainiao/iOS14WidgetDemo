@@ -7,19 +7,19 @@
 
 import WidgetKit
 import SwiftUI
+import Intents
 
-struct Provider: TimelineProvider {
+struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), data: defaultData)
     }
     
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: Date(), data: defaultData)
         completion(entry)
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
         let currentDate = Date()
         
         let updateDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)
@@ -64,11 +64,11 @@ struct GKWYWidget: Widget {
     let kind: String = "GKWYWidget"
     
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             GKWYWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("云音乐推荐")
+        .description("快捷享用你的专属音乐，并可自定义精选功能")
     }
 }
 
